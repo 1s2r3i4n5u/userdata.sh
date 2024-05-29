@@ -1,8 +1,10 @@
-#!/bin/bash
-sudo yum install git -y
-sudo yum install python3-pip -y
-sudo git clone https://github.com/1s2r3i4n5u/car-prediction.git
-cd /
+#!bin/bash
+Sudo yum install git -y 
+Sudo yum install -y yum-utils
+Sudo yum-config-manager --add-repo https://rpm.releases.hashicorp.com/AmazonLinux/hashicorp.repo
+Sudo yum install terraform -y
+Sudo git clone https://github.com/afzal-in/python-tf.git
 cd car-prediction
-pip3 install -r requirements.txt
-screen -m -d python3 app.py
+Terraform init
+Terraform plan
+Terraform apply –auto-approve
